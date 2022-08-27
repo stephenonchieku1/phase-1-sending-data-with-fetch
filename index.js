@@ -1,5 +1,5 @@
 // Add your code here
-function  submitData(name,email){
+function  submitData (name, email){
    return fetch('http://localhost:3000/users', {
     method: 'POST',
     headers: {
@@ -22,11 +22,27 @@ function  submitData(name,email){
       document.body.appendChild(p);
 
     })
-    .catch (function(error){
-      let myerror=document.createElement("p")
-      myerror.textContent=error.message;
-      document.body.appendChild(myerror);
-    }); 
+    .catch (error=>{
+      document.body.textContent=error.message
+    })
+    submitData("steve","steve@gmail.com");
    
   }
-  submitData();
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
